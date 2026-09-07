@@ -1,23 +1,15 @@
-package B
+package C
 
 fun main() {
-    println("=== Tugas 2 : pertukaran nilai variabel ===")
-    Tugas2()
+    val panjang = 10.0
+    val lebar = 5.0
+    val luas = hitungLuas(panjang, lebar)
+
+    println("Panjang : $panjang")
+    println("Lebar   : $lebar")
+    println("Luas    : $luas")
 }
 
-fun Tugas2() {
-    var A: Int = 10
-    var B: Int = 20
-
-    println("Sebelum di tukar")
-    println("A : $A")
-    println("B : $B")
-
-    val temp: Int = A
-    A = B
-    B = temp
-
-    println("\nSetelah di tukar")
-    println("A : $A")
-    println("B : $B")
+fun hitungLuas(panjang: Double, lebar: Double): Double {
+    return panjang * lebar
 }

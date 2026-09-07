@@ -12,7 +12,3 @@ fun main() {
     println("=== Tugas 5 : Analisis Karakter ===")
     Tugas5()
 }
-
-
-
-

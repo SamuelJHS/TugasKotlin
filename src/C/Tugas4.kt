@@ -1,21 +1,30 @@
-package B
+package C
 
 fun main() {
-    println("=== Tugas 4 : Menghitung Gaji Bersih ===")
-    Tugas4()
+    val tugas = 85.0
+    val uts = 75.0
+    val uas = 80.0
+
+    val nilaiAkhir = hitungNilaiAkhir(tugas, uts, uas)
+    val grade = tentukanGrade(nilaiAkhir)
+
+    println("Nilai Tugas : $tugas")
+    println("Nilai UTS   : $uts")
+    println("Nilai UAS   : $uas")
+    println("Nilai Akhir : $nilaiAkhir")
+    println("Grade       : $grade")
 }
 
-fun Tugas4() {
-    val namapegawai: String = "Samuel Jeremiah Hastiawan Serang"
-    val gajipokok: Int = 8000000
-    val tunjangan: Int = 500000
-    val uanglembur: Int = 100000
-    val potongan: Int = 200000
+fun hitungNilaiAkhir(tugas: Double, uts: Double, uas: Double): Double {
+    return (tugas * 0.3) + (uts * 0.3) + (uas * 0.4)
+}
 
-    val gajikotor = gajipokok + tunjangan + uanglembur
-    val gajibersih = gajikotor - potongan
-
-    println("namapegawai: $namapegawai")
-    println("gaji: $gajibersih")
-
+fun tentukanGrade(nilai: Double): String {
+    return when {
+        nilai >= 80.0 -> "A"
+        nilai >= 70.0 -> "B"
+        nilai >= 60.0 -> "C"
+        nilai >= 50.0 -> "D"
+        else -> "E"
+    }
 }
